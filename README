@@ -1,0 +1,7 @@
+Una vez descargada el repo e instalado el docker usar el comandos:
+
+docker build -t front:v1 .
+
+y luego 
+
+docker run -p 3000:80 front:v1
