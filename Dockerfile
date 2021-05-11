@@ -5,7 +5,14 @@ RUN echo "Instalando..."
 RUN apt-get update
 RUN apt-get install -y nginx
 
-COPY . /var/www/html
+
+WORKDIR /var/www/html
+
+
+RUN apt-get install -y npm
+RUN npm install axios
+
+COPY . .
 
 EXPOSE 80
 
